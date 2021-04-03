@@ -1,11 +1,11 @@
 import pandas as pd
 
 # Read CSV
-df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/weather_data.csv')
+df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/weather_data.csv')
 print(df)
 
 # Read Excel
-df = pd.read_excel('/home/safwan/Documents/projects/python/Data Analysis/pandas/weather_data.xlsx')
+df = pd.read_excel('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/weather_data.xlsx')
 print(df)
 
 #From dict

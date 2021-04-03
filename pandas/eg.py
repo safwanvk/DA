@@ -17,7 +17,7 @@ s = b.drop('country',axis=1)
 print(s)
 
 
-data = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/Sample100.csv')
+data = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/Sample100.csv')
 print(data)
 
 

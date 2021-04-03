@@ -1,49 +1,49 @@
 import pandas as pd
 
-# df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.csv')
-# print(df)
+df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.csv')
+print(df)
 
 
-# # Skip rows
-# df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.csv', skiprows=1)
-# print(df)
+# Skip rows
+df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.csv', skiprows=1)
+print(df)
 
-# df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.csv', header=1)
-# print(df)
+df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.csv', header=1)
+print(df)
 
-# # Import data with null header
-# df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.csv', header=None, names=['tickets','eps','revenue','price','people'])
-# print(df)
+# Import data with null header
+df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.csv', header=None, names=['tickets','eps','revenue','price','people'])
+print(df)
 
-# # Limit value
-# df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.csv', nrows=2)
-# print(df)
+# Limit value
+df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.csv', nrows=2)
+print(df)
 
-# # Clean up
-# df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.csv', na_values=['not available', 'n.a.'])
-# print(df)
+# Clean up
+df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.csv', na_values=['not available', 'n.a.'])
+print(df)
 
-# # With dict
-# df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.csv', na_values={
-#     'eps': ['not available', 'n.a.'],
-#     'revenue': ['not available', 'n.a.', '-1'],
-#     'price': ['not available', 'n.a.']
-# })
+# With dict
+df = pd.read_csv('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.csv', na_values={
+    'eps': ['not available', 'n.a.'],
+    'revenue': ['not available', 'n.a.', '-1'],
+    'price': ['not available', 'n.a.']
+})
 
-# # Write csv
-# df.to_csv('new_data.csv')
-# # Remove index
-# df.to_csv('new_data.csv', index=False)
+# Write csv
+df.to_csv('data/new_data.csv')
+# Remove index
+df.to_csv('data/new_data.csv', index=False)
 
-# # Remove Header
-# df.to_csv('new_data.csv', header=False)
+# Remove Header
+df.to_csv('data/new_data.csv', header=False)
 
-# #Limit data to csc
-# df.to_csv('new_data.csv', columns=['tickers','eps'],index=False)
+#Limit data to csc
+df.to_csv('data/new_data.csv', columns=['tickers','eps'],index=False)
 
 #############EXCEL####################
 # Read
-df = pd.read_excel('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.xlsx')
+df = pd.read_excel('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.xlsx')
 print(df)
 
 #Convert data
@@ -58,19 +58,19 @@ def price_cell_convert(cell):
         return 50
     return cell
 
-df = pd.read_excel('/home/safwan/Documents/projects/python/Data Analysis/pandas/stock_data.xlsx',converters={
+df = pd.read_excel('/home/safwan/Documents/projects/python/Data Analysis/pandas/data/stock_data.xlsx',converters={
     'people': people_cell_convert,
     'price': price_cell_convert
 })
 print(df)
 
 # Write to Excel
-df.to_excel('new_data.xlsx', sheet_name='stocks')
+df.to_excel('data/new_data.xlsx', sheet_name='stocks')
 
-df.to_excel('new_data.xlsx', sheet_name='stocks',startrow=1,startcol=2)
+df.to_excel('data/new_data.xlsx', sheet_name='stocks',startrow=1,startcol=2)
 
 # Remove index
-df.to_excel('new_data.xlsx', sheet_name='stocks', index=False)
+df.to_excel('data/new_data.xlsx', sheet_name='stocks', index=False)
 
 
 
